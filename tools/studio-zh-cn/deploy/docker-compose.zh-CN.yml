@@ -1,0 +1,14 @@
+# Requires Docker Compose >= 2.24.4: !override replaces, rather than adds, ports.
+# The Chinese UI is compiled into this custom image. TZ does NOT translate Studio.
+services:
+  studio:
+    image: local/supabase-studio-zh-cn:v0.8.1-zh1
+    environment:
+      TZ: Asia/Shanghai
+  api-gw:
+    ports: !override
+      - "127.0.0.1:8000:8000/tcp"
+  supavisor:
+    ports: !override
+      - "127.0.0.1:5432:5432/tcp"
+      - "127.0.0.1:6543:6543/tcp"

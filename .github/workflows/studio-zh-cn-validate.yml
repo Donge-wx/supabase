@@ -1,0 +1,39 @@
+name: Studio 简体中文汉化包校验
+on:
+  push:
+    paths:
+      - 'tools/studio-zh-cn/**'
+      - '.github/workflows/studio-zh-cn-*.yml'
+      - 'README.zh-CN.md'
+      - '开始部署简体中文版.command'
+  pull_request:
+    paths:
+      - 'tools/studio-zh-cn/**'
+      - '.github/workflows/studio-zh-cn-*.yml'
+      - 'README.zh-CN.md'
+      - '开始部署简体中文版.command'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: tools/studio-zh-cn
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm install --ignore-scripts --no-audit --no-fund
+      - run: npm test
+      - run: python3 -m unittest discover -s tests -p 'test_*.py' -v
+      - run: node --check scripts/localize.cjs && python3 -m py_compile scripts/manage.py
+      - run: bash -n 开始部署.command && bash -n ../../开始部署简体中文版.command

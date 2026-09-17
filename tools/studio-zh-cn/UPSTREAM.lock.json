@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/supabase/supabase.git",
+  "ref": "self-hosted/v0.8.1",
+  "commit": "8c7a4d9dbbaf8b552893822e89d7bf06f33f9220",
+  "framework": "next",
+  "checkedAt": "2026-09-17",
+  "image": "local/supabase-studio-zh-cn:v0.8.1-zh1"
+}

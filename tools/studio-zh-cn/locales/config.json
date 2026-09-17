@@ -1,0 +1,37 @@
+{
+  "defaultLocale": "zh-CN",
+  "supportedLocales": [
+    "zh-CN",
+    "en"
+  ],
+  "mode": "build-time-source-patch",
+  "sourceRoots": [
+    "apps/studio/components",
+    "apps/studio/pages"
+  ],
+  "htmlDocument": "apps/studio/pages/_document.tsx",
+  "jsxAttributes": [
+    "title",
+    "placeholder",
+    "aria-label",
+    "alt",
+    "label",
+    "description",
+    "tooltip",
+    "confirmText",
+    "cancelText",
+    "buttonText",
+    "emptyText",
+    "loadingText"
+  ],
+  "objectPropertiesByFile": {
+    "apps/studio/components/layouts/Navigation/NavigationBar/NavigationBar.utils.tsx": [
+      "label"
+    ],
+    "apps/studio/components/layouts/DatabaseLayout/DatabaseMenu.utils.tsx": [
+      "title",
+      "name",
+      "label"
+    ]
+  }
+}

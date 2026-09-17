@@ -1,0 +1,22 @@
+{
+  "name": "supabase-studio-zh-cn-pack",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Supabase Studio 简体中文源码汉化包与自部署工程",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "localize": "node scripts/localize.cjs",
+    "prepare:upstream": "python3 scripts/manage.py prepare",
+    "build:studio": "python3 scripts/manage.py build",
+    "start:local": "python3 scripts/manage.py start",
+    "stop:local": "python3 scripts/manage.py stop",
+    "status": "python3 scripts/manage.py status"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3"
+  }
+}

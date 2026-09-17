@@ -1,0 +1,17 @@
+Supabase Studio Simplified Chinese Localization Pack
+
+This is an independent, community localization and deployment overlay.
+It is not an official Supabase release, and is not endorsed by Supabase.
+
+The exact upstream source fixtures in tests/fixtures originate from:
+https://github.com/supabase/supabase
+Release: self-hosted/v0.8.1
+Commit: 8c7a4d9dbbaf8b552893822e89d7bf06f33f9220
+
+Those fixtures remain subject to the upstream Apache License 2.0.
+Their original Git blob hashes are recorded in tests/fixtures/manifest.json.
+The full upstream repository is fetched during preparation and retains its own
+license notices and third-party component licenses.
+
+New scripts, translations and documentation in this pack are provided under
+Apache License 2.0. Trademarks are not licensed by this notice.
